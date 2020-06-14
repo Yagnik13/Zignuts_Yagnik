@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.0.5)
+  - GoogleMaps (3.9.0):
+    - GoogleMaps/Maps (= 3.9.0)
+  - GoogleMaps/Base (3.9.0)
+  - GoogleMaps/Maps (3.9.0):
+    - GoogleMaps/Base
+  - SideMenuSwift (2.0.5)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.5)
+  - GoogleMaps
+  - SideMenuSwift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - GoogleMaps
+    - SideMenuSwift
+
+SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
+  SideMenuSwift: c7d99c270e0fad922a14b81f1dcc7a84c764bcd5
+
+PODFILE CHECKSUM: d3f652009ea55cf2f61f504a329eecd59c96f21e
+
+COCOAPODS: 1.9.3

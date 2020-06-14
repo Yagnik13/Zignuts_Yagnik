@@ -1,0 +1,6 @@
+framework module Pods_YagnikPractical_Z {
+  umbrella header "Pods-YagnikPractical_Z-umbrella.h"
+
+  export *
+  module * { export * }
+}

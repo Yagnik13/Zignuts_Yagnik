@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zX8-Sp-19N">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Controller-->
+        <scene sceneID="FGq-DE-zX9">
+            <objects>
+                <viewController storyboardIdentifier="HomeController" id="ACU-Mz-LJA" customClass="HomeController" customModule="YagnikPractical_Z" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BDM-Ys-QyA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTH-aA-2NW" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxy-68-wig" customClass="CoreButton" customModule="YagnikPractical_Z" customModuleProvider="target">
+                                <rect key="frame" x="354" y="94" width="44" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="UuZ-Lf-pb8"/>
+                                    <constraint firstAttribute="width" secondItem="yxy-68-wig" secondAttribute="height" multiplier="1:1" id="eaS-Zt-sYd"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="ic_menu"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_pin" translatesAutoresizingMaskIntoConstraints="NO" id="hHh-5L-jRt">
+                                <rect key="frame" x="178.5" y="437" width="57.5" height="76.5"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47t-hy-csT" customClass="ConfirmRideView" customModule="YagnikPractical_Z" customModuleProvider="target">
+                                <rect key="frame" x="16" y="896" width="382" height="269"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="269" id="BLt-5q-2PI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zzc-nk-9fc" customClass="ActiveRideView" customModule="YagnikPractical_Z" customModuleProvider="target">
+                                <rect key="frame" x="16" y="896" width="382" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="7ub-9B-cm6"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCw-L9-A2J" customClass="CoreButton" customModule="YagnikPractical_Z" customModuleProvider="target">
+                                <rect key="frame" x="434" y="98.5" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Up5-xf-WjF"/>
+                                    <constraint firstAttribute="width" constant="100" id="fiN-y5-7Rf"/>
+                                </constraints>
+                                <state key="normal" title="Cancel Ride">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontFamily">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizableKey" value="Cancel Ride"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="01X-xU-uJV">
+                                <rect key="frame" x="16" y="816" width="382" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOj-Bg-Qki" customClass="AppButton" customModule="YagnikPractical_Z" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="sGu-bt-fqP"/>
+                                        </constraints>
+                                        <state key="normal" title="Start Trip"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizableKey" value="Start Trip"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9qQ-wP-icd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WTH-aA-2NW" secondAttribute="bottom" id="1jY-ns-cfk"/>
+                            <constraint firstItem="47t-hy-csT" firstAttribute="leading" secondItem="xVi-DG-iYp" secondAttribute="leading" constant="16" id="5hG-4D-fPR"/>
+                            <constraint firstItem="01X-xU-uJV" firstAttribute="leading" secondItem="xVi-DG-iYp" secondAttribute="leading" constant="16" id="CGa-8Z-F2k"/>
+                            <constraint firstItem="hHh-5L-jRt" firstAttribute="centerY" secondItem="xVi-DG-iYp" secondAttribute="centerY" id="E8R-G6-kBg"/>
+                            <constraint firstAttribute="trailing" secondItem="nCw-L9-A2J" secondAttribute="trailing" constant="20" id="L2A-Qm-AIR"/>
+                            <constraint firstAttribute="bottom" secondItem="47t-hy-csT" secondAttribute="top" id="LMr-A8-WhW"/>
+                            <constraint firstItem="xVi-DG-iYp" firstAttribute="bottom" secondItem="Zzc-nk-9fc" secondAttribute="bottom" constant="20" id="ODe-n8-xO5"/>
+                            <constraint firstItem="WTH-aA-2NW" firstAttribute="top" secondItem="BDM-Ys-QyA" secondAttribute="top" id="TRz-Ui-LLc"/>
+                            <constraint firstItem="nCw-L9-A2J" firstAttribute="leading" secondItem="BDM-Ys-QyA" secondAttribute="trailing" constant="20" id="Tdf-Gi-YvQ"/>
+                            <constraint firstItem="Zzc-nk-9fc" firstAttribute="leading" secondItem="xVi-DG-iYp" secondAttribute="leading" constant="16" id="Vet-J2-h57"/>
+                            <constraint firstItem="xVi-DG-iYp" firstAttribute="trailing" secondItem="01X-xU-uJV" secondAttribute="trailing" constant="16" id="Z9N-EU-pjD"/>
+                            <constraint firstItem="hHh-5L-jRt" firstAttribute="centerX" secondItem="xVi-DG-iYp" secondAttribute="centerX" id="dER-mw-kAb"/>
+                            <constraint firstItem="xVi-DG-iYp" firstAttribute="bottom" secondItem="47t-hy-csT" secondAttribute="bottom" constant="20" id="hLx-C9-JMV"/>
+                            <constraint firstItem="WTH-aA-2NW" firstAttribute="leading" secondItem="xVi-DG-iYp" secondAttribute="leading" id="i4H-zo-5Ca"/>
+                            <constraint firstItem="xVi-DG-iYp" firstAttribute="trailing" secondItem="Zzc-nk-9fc" secondAttribute="trailing" constant="16" id="kGZ-CA-hSN"/>
+                            <constraint firstItem="yxy-68-wig" firstAttribute="top" secondItem="xVi-DG-iYp" secondAttribute="top" constant="6" id="m5R-5R-2HU"/>
+                            <constraint firstItem="xVi-DG-iYp" firstAttribute="trailing" secondItem="WTH-aA-2NW" secondAttribute="trailing" id="nHV-oG-KHt"/>
+                            <constraint firstItem="nCw-L9-A2J" firstAttribute="centerY" secondItem="yxy-68-wig" secondAttribute="centerY" id="nUc-7D-eDm"/>
+                            <constraint firstAttribute="bottom" secondItem="01X-xU-uJV" secondAttribute="bottom" constant="30" id="p3f-ML-Dwm"/>
+                            <constraint firstItem="xVi-DG-iYp" firstAttribute="trailing" secondItem="47t-hy-csT" secondAttribute="trailing" constant="16" id="rPW-It-mjj"/>
+                            <constraint firstItem="xVi-DG-iYp" firstAttribute="trailing" secondItem="yxy-68-wig" secondAttribute="trailing" constant="16" id="ujb-fh-wTb"/>
+                            <constraint firstAttribute="bottom" secondItem="Zzc-nk-9fc" secondAttribute="top" id="zLt-7w-kfy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xVi-DG-iYp"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ODe-n8-xO5"/>
+                                <exclude reference="hLx-C9-JMV"/>
+                                <exclude reference="L2A-Qm-AIR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="kcH-yk-IDc">
+                        <barButtonItem key="backBarButtonItem" title=" " id="GNM-gj-A7I"/>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="cancelButtonLeadingToSuperview" destination="Tdf-Gi-YvQ" id="tEG-gM-b8k"/>
+                        <outlet property="cancelButtonTrailingToSuperview" destination="L2A-Qm-AIR" id="bdD-dd-uwC"/>
+                        <outlet property="cancelRideButton" destination="nCw-L9-A2J" id="Wb4-Cv-gCc"/>
+                        <outlet property="confirmRideView" destination="47t-hy-csT" id="Tyo-xg-G3S"/>
+                        <outlet property="confirmRideViewBottomConstraintToSafeArea" destination="hLx-C9-JMV" id="pB7-EK-umR"/>
+                        <outlet property="confirmRideViewTopConstraintToSuperView" destination="LMr-A8-WhW" id="0ab-5a-4Cm"/>
+                        <outlet property="coordinatesStackView" destination="01X-xU-uJV" id="FZt-Ji-3XD"/>
+                        <outlet property="mapView" destination="WTH-aA-2NW" id="o1y-sw-1Nr"/>
+                        <outlet property="menuButton" destination="yxy-68-wig" id="d9c-fL-Ny4"/>
+                        <outlet property="menuButtonLeadingConstraint" destination="ujb-fh-wTb" id="ftJ-Zv-xYd"/>
+                        <outlet property="pickupDropOffButton" destination="AOj-Bg-Qki" id="KBZ-oe-p8U"/>
+                        <outlet property="pickupDropoffImageView" destination="hHh-5L-jRt" id="IaW-yb-3FT"/>
+                        <segue destination="MP2-O3-Opg" kind="show" identifier="ShowMyRidesHistoryController" id="jbw-Pc-kjg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LVB-LS-uQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="463"/>
+        </scene>
+        <!--Trip Details-->
+        <scene sceneID="eX3-4P-Xjx">
+            <objects>
+                <viewController storyboardIdentifier="TripDetailsController" id="rz8-vX-DOF" customClass="TripDetailsController" customModule="YagnikPractical_Z" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cOj-Ob-w6g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWo-oB-fsl" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LWo-oB-fsl" firstAttribute="top" secondItem="cOj-Ob-w6g" secondAttribute="top" id="CPG-Yz-ls9"/>
+                            <constraint firstItem="LWo-oB-fsl" firstAttribute="leading" secondItem="cOj-Ob-w6g" secondAttribute="leading" id="Xkh-tr-1g2"/>
+                            <constraint firstItem="EPy-OX-g5o" firstAttribute="trailing" secondItem="LWo-oB-fsl" secondAttribute="trailing" id="fIl-Rj-RuH"/>
+                            <constraint firstAttribute="bottom" secondItem="LWo-oB-fsl" secondAttribute="bottom" id="x4i-w9-inr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EPy-OX-g5o"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trip Details" id="laA-Tw-f9Q"/>
+                    <connections>
+                        <outlet property="mapView" destination="LWo-oB-fsl" id="MmE-a9-ucp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynH-d3-dk4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2017" y="463"/>
+        </scene>
+        <!--Menu Controller-->
+        <scene sceneID="b61-tM-isD">
+            <objects>
+                <viewController storyboardIdentifier="MenuController" automaticallyAdjustsScrollViewInsets="NO" id="zX8-Sp-19N" customClass="MenuController" customModule="YagnikPractical_Z" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jv2-C3-tVW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqk-EY-ye5">
+                                <rect key="frame" x="83" y="44" width="331" height="852"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vb4-mb-ydW" customClass="CoreTableView" customModule="YagnikPractical_Z" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="852"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="66" id="0nr-1U-Jpu" customClass="MenuCell" customModule="YagnikPractical_Z" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="331" height="66"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0nr-1U-Jpu" id="yNr-D9-Sx9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="331" height="66"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_home" translatesAutoresizingMaskIntoConstraints="NO" id="jC6-Bl-G7U">
+                                                            <rect key="frame" x="10" y="20.5" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="I8E-TN-q9u"/>
+                                                                <constraint firstAttribute="height" constant="25" id="KnQ-mt-v7v"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvN-HS-DfO" customClass="CoreLabel" customModule="YagnikPractical_Z" customModuleProvider="target">
+                                                            <rect key="frame" x="47" y="15" width="249" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" name="appNavyBlue"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="fontFamily">
+                                                                    <integer key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                    <real key="value" value="17"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovh-gQ-V0v">
+                                                            <rect key="frame" x="0.0" y="65" width="331" height="1"/>
+                                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="RWh-Zu-XZz"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="FvN-HS-DfO" firstAttribute="top" secondItem="yNr-D9-Sx9" secondAttribute="top" constant="15" id="CwD-3y-Lui"/>
+                                                        <constraint firstItem="jC6-Bl-G7U" firstAttribute="centerY" secondItem="yNr-D9-Sx9" secondAttribute="centerY" id="KE9-2e-9fE"/>
+                                                        <constraint firstItem="ovh-gQ-V0v" firstAttribute="leading" secondItem="yNr-D9-Sx9" secondAttribute="leading" id="NTZ-1V-4MX"/>
+                                                        <constraint firstItem="FvN-HS-DfO" firstAttribute="leading" secondItem="jC6-Bl-G7U" secondAttribute="trailing" constant="12" id="bky-2m-Wj3"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="FvN-HS-DfO" secondAttribute="trailing" constant="15" id="dCz-EN-1lf"/>
+                                                        <constraint firstItem="jC6-Bl-G7U" firstAttribute="leading" secondItem="yNr-D9-Sx9" secondAttribute="leading" constant="10" id="hzX-ha-P1O"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ovh-gQ-V0v" secondAttribute="trailing" id="k9u-WV-pJb"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ovh-gQ-V0v" secondAttribute="bottom" id="lmy-ya-O8a"/>
+                                                        <constraint firstAttribute="bottom" secondItem="FvN-HS-DfO" secondAttribute="bottom" constant="15" id="yLr-HN-05g"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="menuImageView" destination="jC6-Bl-G7U" id="rDm-37-7b7"/>
+                                                    <outlet property="titleLabel" destination="FvN-HS-DfO" id="k6u-RS-0lC"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="zX8-Sp-19N" id="toK-IM-CnK"/>
+                                            <outlet property="delegate" destination="zX8-Sp-19N" id="1cs-f9-ih8"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vb4-mb-ydW" firstAttribute="leading" secondItem="Lqk-EY-ye5" secondAttribute="leading" id="W7C-qd-w39"/>
+                                    <constraint firstItem="vb4-mb-ydW" firstAttribute="top" secondItem="Lqk-EY-ye5" secondAttribute="top" id="ixT-ph-9np"/>
+                                    <constraint firstAttribute="trailing" secondItem="vb4-mb-ydW" secondAttribute="trailing" id="lsz-RG-xFQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="vb4-mb-ydW" secondAttribute="bottom" id="zxs-Sw-J6r"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Lqk-EY-ye5" firstAttribute="top" secondItem="MmT-jI-yha" secondAttribute="top" id="1d9-T7-7I0"/>
+                            <constraint firstAttribute="trailing" secondItem="Lqk-EY-ye5" secondAttribute="trailing" id="4Oq-pQ-4wc"/>
+                            <constraint firstItem="Lqk-EY-ye5" firstAttribute="width" secondItem="jv2-C3-tVW" secondAttribute="width" multiplier="0.8" id="V27-nw-zya"/>
+                            <constraint firstAttribute="bottom" secondItem="Lqk-EY-ye5" secondAttribute="bottom" id="uub-JU-wvn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MmT-jI-yha"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q2j-fM-SaE"/>
+                    <connections>
+                        <outlet property="selectionMenuTrailingConstraint" destination="4Oq-pQ-4wc" id="Hzy-B5-n8v"/>
+                        <outlet property="tableView" destination="vb4-mb-ydW" id="9cM-Jd-2D7"/>
+                        <segue destination="E2i-QL-n7a" kind="custom" customClass="SideMenuSegue" customModule="SideMenuSwift" id="Uej-OT-GzM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T62-M9-Ser" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1145" y="463"/>
+        </scene>
+        <!--Home Navigation Controller-->
+        <scene sceneID="7E2-Jg-C2B">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="E2i-QL-n7a" customClass="HomeNavigationController" customModule="YagnikPractical_Z" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="W8a-xT-fNH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2hG-bp-BAX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ACU-Mz-LJA" kind="relationship" relationship="rootViewController" id="7Pj-g5-WYH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlq-fr-PvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-216" y="463"/>
+        </scene>
+        <!--Trip History-->
+        <scene sceneID="qVG-DY-psT">
+            <objects>
+                <viewController storyboardIdentifier="TripHistoryController" id="MP2-O3-Opg" customClass="TripHistoryController" customModule="YagnikPractical_Z" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="APF-NI-nGH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VBS-Nt-3qc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="MP2-O3-Opg" id="L9s-hH-h0T"/>
+                                    <outlet property="delegate" destination="MP2-O3-Opg" id="yJb-z4-ufb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VBS-Nt-3qc" firstAttribute="leading" secondItem="Lk9-er-nFi" secondAttribute="leading" id="Hek-oD-HQs"/>
+                            <constraint firstItem="Lk9-er-nFi" firstAttribute="bottom" secondItem="VBS-Nt-3qc" secondAttribute="bottom" id="QHf-q4-bd4"/>
+                            <constraint firstItem="VBS-Nt-3qc" firstAttribute="top" secondItem="Lk9-er-nFi" secondAttribute="top" id="VZY-FK-lAF"/>
+                            <constraint firstItem="Lk9-er-nFi" firstAttribute="trailing" secondItem="VBS-Nt-3qc" secondAttribute="trailing" id="Wnm-oC-BvJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lk9-er-nFi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trip History" id="A0E-6l-Vx5">
+                        <barButtonItem key="backBarButtonItem" title=" " id="nau-V0-ZNU"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="listTableView" destination="VBS-Nt-3qc" id="4u7-qW-MP1"/>
+                        <segue destination="rz8-vX-DOF" kind="show" id="9Z7-p0-ROH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rtv-d0-3Ld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="463"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_green_pin" width="57.5" height="76.5"/>
+        <image name="ic_home" width="20.5" height="24"/>
+        <image name="ic_menu" width="42" height="42"/>
+        <namedColor name="appNavyBlue">
+            <color red="0.14100000262260437" green="0.18000000715255737" blue="0.25900000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CdAddress" representedClassName="CdAddress" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="address_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="area" optional="YES" attributeType="String"/>
+        <attribute name="building_name" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="street_address" optional="YES" attributeType="String"/>
+        <attribute name="time" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" usesScalarValueType="YES"/>
+        <relationship name="ride" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CdRide" inverseName="addresses" inverseEntity="CdRide"/>
+    </entity>
+    <entity name="CdRide" representedClassName="CdRide" syncable="YES">
+        <attribute name="distance" optional="YES" attributeType="String"/>
+        <attribute name="ride_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ride_type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="addresses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CdAddress" inverseName="ride" inverseEntity="CdAddress"/>
+        <relationship name="status" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CdStatus" inverseName="ride" inverseEntity="CdStatus"/>
+    </entity>
+    <entity name="CdStatus" representedClassName="CdStatus" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="message" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="ride" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CdRide" inverseName="status" inverseEntity="CdRide"/>
+    </entity>
+    <elements>
+        <element name="CdAddress" positionX="203.58984375" positionY="-95.73828125" width="128" height="208"/>
+        <element name="CdRide" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="CdStatus" positionX="192.8984375" positionY="204.0390625" width="128" height="103"/>
+    </elements>
+</model>
